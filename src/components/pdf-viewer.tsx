@@ -3,6 +3,9 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import PSPDFKit, { Instance } from 'pspdfkit';
 
 import ExternalTools from './external-tools';
+// import { loadButton } from '@/buttons';
+
+import icon from '../assets/logo.svg?raw';
 
 function PdfViewer() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -21,6 +24,14 @@ function PdfViewer() {
         toolbarItems: [
           ...PSPDFKit.defaultToolbarItems,
           { type: 'content-editor' },
+          {
+            type: 'custom',
+            id: 'my-button',
+            title: 'Load',
+            icon: icon,
+            onPress: () => {},
+          },
+          // loadButton(),
         ],
       });
 

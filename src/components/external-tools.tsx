@@ -70,12 +70,6 @@ function ExternalTools({
     // instance?.setViewState((viewState) =>
     //   viewState.set('sidebarMode', PSPDFKit.SidebarMode.ANNOTATIONS)
     // );
-
-    console.warn('Clicked ');
-
-    instance?.setToolbarItems(() => {
-      return [];
-    });
   };
 
   return (
